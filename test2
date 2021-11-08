@@ -1,0 +1,38 @@
+import java.util.*;
+public class ts01 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		while(sc.hasNext()){
+			is_prime pr = new is_prime();
+			pr.a = sc.nextInt();
+			pr.prime();
+		}
+	}
+}
+    class is_prime{
+        int a , b;
+        
+        void prime() {
+            if(a == 2 || a == 3) {
+                System.out.println("YES");
+            }
+            else {
+                for(int i = 2 ; i <= (a / 2) ; i++) {
+                    if(a % i == 0) {
+                        b = 0;
+                        break;
+                    }
+                    else {
+                        b = 1;
+                    }
+                }
+                if(b == 1) {
+                    System.out.println("YES");
+                }
+                else {
+                    System.out.println("No");
+                }
+            }
+        }
+    }
+    
